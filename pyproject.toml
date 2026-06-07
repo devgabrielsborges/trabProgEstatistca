@@ -1,0 +1,17 @@
+[project]
+name = "trabprogestatistca"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+[project.scripts]
+siga = "src.siga:main"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "black>=26.5.1",
+    "isort>=8.0.1",
+    "mypy>=2.1.0",
+    "pre-commit>=4.6.0",
+]

@@ -34,16 +34,28 @@ class discentes:
 
 
     def atualizar_notas(self, matricula: str, notas: list[float]):
-        print("nd")
+        if matricula not in self._discentes:
+            print("Erro: Discente não encontrado")
+            return
+        self._discentes[matricula].notas = notas
+        nome = self._discentes[matricula].nome
+        print(f"Notas do discente {nome} atualizadas com sucesso")
 
 
     def atualizar_frequencia(self, matricula: str):
-        print("nd")
+        if matricula not in self._discentes:
+            print("Erro: Discente não encontrado")
+            return
+        self._discentes[matricula].num_presencas += 1
+        nome = self._discentes[matricula].nome
+        print(f"Frequência do discente {nome} atualizada com sucesso")
 
 
     def remover_discente(self, matricula: str):
         if matricula in self._discentes:
+            nome = self._discentes[matricula].nome
             self._discentes.pop(matricula)
+            print(f"Discente {nome} removido com sucesso")
 
 
     def imprimir_relatorio(self):

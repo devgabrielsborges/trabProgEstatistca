@@ -5,7 +5,7 @@ class discente:
     matricula: str
     nome: str
     num_presencas: int = 0
-    notas: list[float] = field(default_factory=lambda: [])
+    notas: list[float] = field(default_factory=lambda: [0.0, 0.0, 0.0])
 
 class discentes:
     def __init__(self):
